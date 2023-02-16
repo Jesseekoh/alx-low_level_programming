@@ -1,4 +1,4 @@
-include < stdio.h >
+#include <stdio.h>
 /**
   * main - prints message to console
   * Return: 0
