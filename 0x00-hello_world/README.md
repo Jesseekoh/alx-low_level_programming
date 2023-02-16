@@ -4,3 +4,4 @@
 3-name compiles a C file and creates an executable named cisfun
 4-puts is a C program thats prints "Programming is like building a multilingual puzzle
 5-printf.c prints "with proper grammar, but the outcome is a piece of art,"
+6-size.c prints the size of various types 
