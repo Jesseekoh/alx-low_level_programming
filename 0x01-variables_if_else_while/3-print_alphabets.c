@@ -19,6 +19,7 @@ int main(void)
 	while (capitalLetter <= 'Z')
 	{
 		putchar(capitalLetter);
+		capitalLetter++;
 	}
 
 	putchar('\n');
