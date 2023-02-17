@@ -8,7 +8,6 @@
 
 int main(void)
 {
-	int num = '0';
 	int i;
 	int j;
 
