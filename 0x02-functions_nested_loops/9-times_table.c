@@ -18,7 +18,7 @@ void time_table(void)
 			if (j == 0)
 				_putchar(product + '0');
 
-			if (k < 10 && j!= 0)
+			if (product < 10 && j!= 0)
 			{
 				_putchar(',');
 				_putchar(' ');
