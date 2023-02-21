@@ -25,7 +25,7 @@ void time_table(void)
 				_putchar(' ');
 				_putchar(product + '0');
 			}
-			else if (k >= 10)
+			else if (product >= 10)
 			{
 				_putchar(',');
 				_putchar(' ');
