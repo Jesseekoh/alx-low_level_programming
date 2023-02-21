@@ -1,4 +1,4 @@
-
+#include "main.h"
 /**
   *main - prints "_putchar" without the standard library
   *Return: 0
