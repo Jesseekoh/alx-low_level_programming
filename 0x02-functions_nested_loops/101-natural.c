@@ -14,7 +14,7 @@ int main(void)
 	for (i = 1; i < limit; i++)
 	{
 		if (i % 3 == 0 || i % 5 == 0)
-			sum+= i;
+			sum += i;
 		else
 			continue;
 	}
