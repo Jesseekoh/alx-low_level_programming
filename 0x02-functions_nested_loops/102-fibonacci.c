@@ -12,7 +12,7 @@ int main(void)
 	int fib2 = 1;
 	int sum;
 
-	for (i = 1 ; i <= 50; i++)
+	for (i = 0 ; i < 50; i++)
 	{
 		sum = fib1 + fib2;
 		printf("%d", sum);
@@ -20,7 +20,7 @@ int main(void)
 		fib1 = fib2;
 		fib2 = sum;
 
-		if (i ==50)
+		if (i == 49)
 			printf("\n");
 		else
 			printf(", ");
