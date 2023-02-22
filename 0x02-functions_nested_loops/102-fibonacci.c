@@ -5,12 +5,12 @@
   * Return: void
   */
 
-void main(void)
+int main(void)
 {
 	int i;
 	int fib1 = 0;
 	int fib2 = 1;
-	int sum
+	int sum;
 
 	for (i = 1 ; i <= 50; i++)
 	{
@@ -25,4 +25,6 @@ void main(void)
 		else
 			printf(", ");
 	}
+
+	return (0);
 }
