@@ -4,16 +4,17 @@
   * print_most_numbers - prints numbers 0 to 9 except 2 and 4
   * Return: void
   */
-
 void print_most_numbers(void)
 {
-	char i = '0';
+	char c;
 
-	while (i <= '9')
+	for (c = '0'; c <= '9'; c++)
 	{
-		if (i != '2' || i != '4')
-			_putchar(i);
-		i++;
+		if (c != '2' || c != '4')
+		{
+			_putchar(c);
+		}
+		c++;
 	}
 
 	_putchar('\n');
