@@ -2,10 +2,10 @@
 
 /**
   * main - prints number
-  * Return: void
+  * Return: 0
   */
 
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -30,4 +30,5 @@ void main(void)
 		printf("\n");
 
 	}
+	return (0);
 }
