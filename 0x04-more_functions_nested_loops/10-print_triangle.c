@@ -2,7 +2,7 @@
 
 /**
   * print_triangle - prints hashes in triangle formation
-  * @size - size of triangle
+  * @size: size of triangle
   * Return: void
   */
 
