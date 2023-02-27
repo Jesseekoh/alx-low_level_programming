@@ -8,22 +8,38 @@
 
 void rev_string(char *s)
 {
-	char buffer = s;
-	int lengthOfStr = 0;
+	int lengthOfStr = _strlen(s);
 	int i, j;
+	char buffer;
 
-	while (s[lengthOfStr] != '\0')
+	for (i = 0; i < lengthOfStr / 2; i++)
 	{
-		lengthOfStr++;
+		buffer = s[i];
+		s[i] = s[lengthOfStr - 1 - i];
+		s[lengthOfStr - 1 - i] = ch;
 	}
 
-	for (i = lengthOfStr; i >= 0; i--)
+
+}
+
+
+/**
+  * _strlen - returns the length of a string
+  * @s: string to be checked
+  * Return: length of string
+  */
+
+
+int _strlen(char *s)
+{
+	int i = 0;
+	int length = 0;
+
+	while (s[i] != '\0')
 	{
-		for (j = 0; j <= lengthOfStr; j++)
-		{
-			buffer[j] = s[i];
-		}
+		length++;
+		i++;
 	}
 
-	*s = buffer;
+	return (length);
 }
