@@ -16,7 +16,7 @@ void rev_string(char *s)
 	{
 		buffer = s[i];
 		s[i] = s[lengthOfStr - 1 - i];
-		s[lengthOfStr - 1 - i] = ch;
+		s[lengthOfStr - 1 - i] = buffer;
 	}
 
 
