@@ -11,11 +11,11 @@ void puts_half(char *str)
 	int lenStr = _strlen(str);
 	int i;
 
-	if (lenStr % 2 == 0)
+	if (lenStr+  % 2 != 0)
 	{
-		i = 0;
+		i = (lenStr + 1) / 2;
 
-		while (i < lenStr / 2)
+		while (i < lenStr)
 		{
 			_putchar(str[i]);
 			i++;
@@ -23,11 +23,12 @@ void puts_half(char *str)
 	}
 	else
 	{
-		i = (lenStr + 3) / 2;
+		i = lenStr / 2;
 
-		while (i > lenStr)
+		while (i < lenStr)
 		{
 			_putchar(str[i]);
+			i++;
 		}
 	}
 
