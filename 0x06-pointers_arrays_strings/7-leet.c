@@ -7,7 +7,8 @@
   */
 char *leet(char *str)
 {
-	int i, j;
+	int i = 0;
+	int j = 0;
 	char a[] = "aAeEoOtTlL";
 
 	while (str[i] != '\0')
