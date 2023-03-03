@@ -12,18 +12,16 @@ char *rot13(char *str)
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	while (str[i] != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		while (a[j] != '\0')
+		for (j = 0; a[j] != '\0'; j++)
 		{
 			if (str[i] == a[j])
 			{
 				str[i] = b[j];
 				break;
 			}
-			j++;
 		}
-		i++;
 	}
 	return (str);
 }
