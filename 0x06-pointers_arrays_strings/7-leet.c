@@ -9,15 +9,15 @@ char *leet(char *str)
 {
 	int i, j;
 	char a[] = "aAeEoOtTlL";
-	char b[] = "4433007711";
 
 	while (str[i] != '\0')
 	{
-		for (; j < 10; j++)
+		for (j = 0; j < 10; j += 2)
 		{
-			if (a[j] == str[i])
+			if (str[i] == a[j] || str[i] == a[j] - 32)
 			{
-				str[i] = b[j];
+				str[i] = a[j + 1];
+				break;
 			}
 		}
 		i++;
