@@ -7,7 +7,7 @@
   * Return: 1 if identical and 0 if not
   */
 
- int wildcmp(char *s1, char *s2)
+int wildcmp(char *s1, char *s2)
 {
 	if (*s1 == '\0' && *s2 == '\0')
 		return (1);
@@ -23,7 +23,7 @@
 			return (wildcmp(s1, s2 + 1));
 		}
 
-		if ( wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2 + 1))
+		if (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2 + 1))
 			return (1);
 	}
 
