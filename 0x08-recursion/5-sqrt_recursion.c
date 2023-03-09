@@ -26,7 +26,7 @@ int get_sqrt(int a, int x)
 	}
 	if (a * a < x)
 	{
-		returns (-1);
+		return (-1);
 	}
 	return (get_sqrt(a + 1, x);
 }
