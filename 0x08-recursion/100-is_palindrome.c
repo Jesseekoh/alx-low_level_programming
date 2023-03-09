@@ -16,23 +16,22 @@ int is_palindrome(char *s)
 		return (1);
 	}
 
-	return (checkPalindrome(s, i, len);
+	return (checkPalindrome(s, i, len));
 }
 
 /**
-  * findStrlen - finds the length of a string
+  * getStrlen - finds the length of a string
   * @s: string to check
   * Return: length of string
   */
-
-int findStrlen(char @s)
+int getStrlen(char *s)
 {
 	int len = 0;
 
 	if (*(s + len))
 	{
 		len++;
-		len = len + findStrlen(s + len);
+		len = len + getStrlen(s + len);
 	}
 	return (len);
 }
