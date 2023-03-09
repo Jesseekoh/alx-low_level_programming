@@ -26,5 +26,5 @@ int is_prime(int a, int n)
 	else if (a > n / 2)
 		return (1);
 	else
-		return (is_prime(a + 1, n);
+		return (is_prime(a + 1, n));
 }
