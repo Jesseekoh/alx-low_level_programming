@@ -28,5 +28,5 @@ int get_sqrt(int a, int x)
 	{
 		return (get_sqrt(a + 1, x));
 	}
-	return (get_sqrt(-1);
+	return (-1);
 }
