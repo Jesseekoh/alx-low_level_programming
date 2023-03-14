@@ -35,12 +35,12 @@ char *str_concat(char *s1, char *s2)
 
 	while (*s1)
 	{
-		p[k] = *s1++;
+		newStr[k] = *s1++;
 		k++;
 	}
 	while (*s2)
 	{
-		p[k] = *s2++;
+		newStr[k] = *s2++;
 		k++;
 	}
 	return (newStr);
