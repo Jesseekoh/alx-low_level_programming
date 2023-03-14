@@ -8,7 +8,7 @@
   */
 int **alloc_grid(int width, int height)
 {
-	int *array[], i, j;
+	int **array, i, j;
 
 	i = 0;
 	j = 0;
