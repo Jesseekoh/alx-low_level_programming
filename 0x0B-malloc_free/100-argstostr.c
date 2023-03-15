@@ -18,10 +18,10 @@ char *argstostr(int ac, char **av)
 		{
 			len++;
 		}
-		size++;
+		len++;
 	}
 
-	newStr = malloc((sizeof(char) * size) + 1);
+	newStr = malloc((sizeof(char) * len) + 1);
 	if (newStr == NULL)
 	{
 		return (NULL);
