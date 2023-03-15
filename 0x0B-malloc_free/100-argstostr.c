@@ -6,7 +6,6 @@
  * @av: array of arguments
  * Return: a pointer to a new string, or NULL if it fails
  */
-
 char *argstostr(int ac, char **av)
 {
 	char *newStr;
@@ -30,9 +29,7 @@ char *argstostr(int ac, char **av)
 	}
 	newStr = malloc((sizeof(char) * len) + 1);
 	if (newStr == NULL)
-	{
 		return (NULL);
-	}
 	i = 0;
 	while (i < ac)
 	{
