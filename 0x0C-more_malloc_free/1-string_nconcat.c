@@ -13,7 +13,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int i;
 	int l;
 
-	l = 0;
+	l = n;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -23,7 +23,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		l++;
 	}
-	l += n;
 	newStr = malloc(sizeof(char) * (l + 1));
 	l = 0;
 	if (newStr == NULL)
