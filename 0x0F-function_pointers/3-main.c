@@ -10,7 +10,7 @@
 int main(int argc, **argv)
 {
 	int num1, num2, result;
-	int (*action)(int, int);
+	int (*oprt)(int, int);
 
 	if (argc != 4)
 	{
@@ -26,7 +26,7 @@ int main(int argc, **argv)
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	result = action(num1, num2);
+	result = oprt(num1, num2);
 	printf("%d\n", result);
 	return (0);
 
