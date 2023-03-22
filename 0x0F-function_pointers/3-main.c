@@ -35,3 +35,4 @@ int main(int argc, char **argv)
 	result = opr(num1, num2);
 	printf("%d\n", result);
 	return (0);
+}
