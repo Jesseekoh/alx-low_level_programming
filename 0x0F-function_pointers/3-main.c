@@ -9,35 +9,29 @@
   * Return: int
   */
 
-int main(int argc, **argv)
+int main(int argc, char **argv)
 {
 	int num1, num2, result;
-	int (*oprt)(int, int);
+	int (*opr)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-
 	if (argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-
-	oprt = get_op_func(argv[2]);
-	if (oprt == 0)
+	opr = get_op_func(argv[2]);
+	if (opr == 0)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	result = oprt(num1, num2);
+	result = opr(num1, num2);
 	printf("%d\n", result);
 	return (0);
-
-
-}
