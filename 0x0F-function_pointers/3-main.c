@@ -26,6 +26,13 @@ int main(int argc, **argv)
 		exit(99);
 	}
 
+	oprt = get_op_func(argv[2]);
+	if (oprt == 0)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 	result = oprt(num1, num2);
