@@ -3,7 +3,7 @@
 /**
   * print_numbers - prints numbers followed by new line
   * @n: count of args
-  * @seperator: seperator
+  * @separator: number separator
   * Return: ...
   */
 
