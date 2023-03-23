@@ -1,5 +1,10 @@
 #include "variadic_functions.h"
 
+/**
+  * print_all - prints all args
+  * @format: operation format
+  * Return: void
+  */
 
 void print_all(const char * const format, ...)
 {
