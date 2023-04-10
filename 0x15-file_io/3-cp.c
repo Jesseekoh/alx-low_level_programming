@@ -52,7 +52,17 @@ int main(int argc, char **argv)
 		handle_errors(r, w, argv);
 	}
 	r = close(f1);
+	if (r == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f2);
+		exit(100);
+	}
 	r = close(f2);
+	if (r == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f1);
+		exit(100);
+	}
 	free(buffer);
 	return (0);
 }
