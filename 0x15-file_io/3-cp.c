@@ -51,13 +51,13 @@ int main(int argc, char **argv)
 		w = write(f2, buffer, r);
 		handle_errors(r, w, argv);
 	}
-	r = close(f1);
+	r = close(f2);
 	if (r == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f2);
 		exit(100);
 	}
-	r = close(f2);
+	r = close(f1);
 	if (r == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f1);
