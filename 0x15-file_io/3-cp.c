@@ -29,7 +29,7 @@ void handle_errors(int f1, int f2, char **argv)
 
 int main(int argc, char **argv)
 {
-	int f1, f2, r, w;
+	int f1, f2, r, w, c;
 	char *buffer;
 
 	if (argc != 3)
@@ -51,14 +51,14 @@ int main(int argc, char **argv)
 		w = write(f2, buffer, r);
 		handle_errors(r, w, argv);
 	}
-	r = close(f2);
-	if (r == -1)
+	c = close(f2);
+	if (c == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f2);
 		exit(100);
 	}
-	r = close(f1);
-	if (r == -1)
+	c = close(f1);
+	if (c == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f1);
 		exit(100);
