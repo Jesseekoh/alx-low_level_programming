@@ -29,7 +29,8 @@ void handle_errors(int f1, int f2, char **argv)
 
 int main(int argc, char **argv)
 {
-	int f1, f2, r, w, c;
+	ssize_t r, w, c;
+	int f1, f2;
 	char *buffer;
 
 	if (argc != 3)
