@@ -32,12 +32,12 @@ void check_elf(unsigned char *e_ident)
 }
 
 /**
- * print_magic - Prints the magic numbers of an ELF header.
+ * print_magic_numbers - Prints the magic numbers of an ELF header.
  * @e_ident: A pointer to an array containing the ELF magic numbers.
  *
  * Description: Magic numbers are separated by spaces.
  */
-void print_magic(unsigned char *e_ident)
+void print_magic_numbers(unsigned char *e_ident)
 {
 	int i;
 
@@ -55,10 +55,10 @@ void print_magic(unsigned char *e_ident)
 }
 
 /**
- * print_class - Prints the class of an ELF header.
+ * print_elf_class - Prints the class of an ELF header.
  * @e_ident: A pointer to an array containing the ELF class.
  */
-void print_class(unsigned char *e_ident)
+void print_elf_class(unsigned char *e_ident)
 {
 	printf("  Class:                             ");
 
@@ -82,7 +82,7 @@ void print_class(unsigned char *e_ident)
  * print_data - Prints the data of an ELF header.
  * @e_ident: A pointer to an array containing the ELF class.
  */
-void print_data(unsigned char *e_ident)
+void print_elf_data(unsigned char *e_ident)
 {
 	printf("  Data:                              ");
 
@@ -106,7 +106,7 @@ void print_data(unsigned char *e_ident)
  * print_version - Prints the version of an ELF header.
  * @e_ident: A pointer to an array containing the ELF version.
  */
-void print_version(unsigned char *e_ident)
+void print_elf_version(unsigned char *e_ident)
 {
 	printf("  Version:                           %d",
 	       e_ident[EI_VERSION]);
@@ -126,7 +126,7 @@ void print_version(unsigned char *e_ident)
  * print_osabi - Prints the OS/ABI of an ELF header.
  * @e_ident: A pointer to an array containing the ELF version.
  */
-void print_osabi(unsigned char *e_ident)
+void print_elf_osabi(unsigned char *e_ident)
 {
 	printf("  OS/ABI:                            ");
 
@@ -171,7 +171,7 @@ void print_osabi(unsigned char *e_ident)
  * print_abi - Prints the ABI version of an ELF header.
  * @e_ident: A pointer to an array containing the ELF ABI version.
  */
-void print_abi(unsigned char *e_ident)
+void print_elf_abi(unsigned char *e_ident)
 {
 	printf("  ABI Version:                       %d\n",
 	       e_ident[EI_ABIVERSION]);
@@ -182,7 +182,7 @@ void print_abi(unsigned char *e_ident)
  * @e_type: The ELF type.
  * @e_ident: A pointer to an array containing the ELF class.
  */
-void print_type(unsigned int e_type, unsigned char *e_ident)
+void print_elf_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 		e_type >>= 8;
@@ -216,7 +216,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
  * @e_entry: The address of the ELF entry point.
  * @e_ident: A pointer to an array containing the ELF class.
  */
-void print_entry(unsigned long int e_entry, unsigned char *e_ident)
+void print_elf_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
 	printf("  Entry point address:               ");
 
@@ -289,14 +289,14 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	check_elf(header->e_ident);
 	printf("ELF Header:\n");
-	print_magic(header->e_ident);
-	print_class(header->e_ident);
-	print_data(header->e_ident);
-	print_version(header->e_ident);
-	print_osabi(header->e_ident);
-	print_abi(header->e_ident);
-	print_type(header->e_type, header->e_ident);
-	print_entry(header->e_entry, header->e_ident);
+	print_magic_numbers(header->e_ident);
+	print_elf_class(header->e_ident);
+	print_elf_data(header->e_ident);
+	print_elf_version(header->e_ident);
+	print_elf_osabi(header->e_ident);
+	print_elf_abi(header->e_ident);
+	print_elf_type(header->e_type, header->e_ident);
+	print_elf_entry(header->e_entry, header->e_ident);
 
 	free(header);
 	close_elf(o);
