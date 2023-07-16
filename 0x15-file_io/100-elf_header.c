@@ -251,13 +251,3 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	}
 	return (0);
 }
-
-void check_elf(unsigned char *e_ident);
-void print_magic_numbers(unsigned char *e_ident);
-void print_elf_class(unsigned char *e_ident);
-void print_header_data(unsigned char *e_ident);
-void print_elf_version(unsigned char *e_ident);
-void print_elf_abi(unsigned char *e_ident);
-void print_elf_osabi(unsigned char *e_ident);
-void print_elf_type(unsigned int e_type, unsigned char *e_ident);
-void print_entry(unsigned long int e_entry, unsigned char *e_ident);
