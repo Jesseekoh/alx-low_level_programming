@@ -1,6 +1,7 @@
 #include "main.h"
 #include <elf.h>
 #include <sys/stat.h>
+#include <sys/types.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -20,13 +21,13 @@ void check_elf(unsigned char *e_ident)
 
 	while (i < 4)
 	{
-		if (e_indent[i] != 'E' &&
-			e_indent[i] != 'L' &&
-			e_indent[i] != 'F' &&
-			e_indent[i] != 127)
+		if (e_ident[i] != 'E' &&
+			e_ident[i] != 'L' &&
+			e_ident[i] != 'F' &&
+			e_ident[i] != 127)
 		{
-			dprintf(STDERR_FILENO, "Error: Not an ELF file\n")
-				exit(98);
+			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
+			exit(98);
 		}
 		i++;
 	}
@@ -261,6 +262,6 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	print_entry(header->e_entry, header->e_ident);
 
 	free(header);
-	close_elf(a)
+	close_elf(a);
 	return (0);
 }
