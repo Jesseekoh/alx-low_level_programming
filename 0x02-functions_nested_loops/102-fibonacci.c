@@ -8,9 +8,9 @@
 int main(void)
 {
 	int i;
-	int fib1 = 0;
-	int fib2 = 1;
-	int sum;
+	unsigned long fib1 = 0;
+	unsigned long fib2 = 1;
+	unsigned long sum;
 
 	for (i = 0 ; i < 50; i++)
 	{
