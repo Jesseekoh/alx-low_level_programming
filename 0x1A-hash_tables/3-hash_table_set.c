@@ -49,10 +49,12 @@ hash_node_t *create_item(const char *key, const char *value)
 {
 	hash_node_t *item = (hash_node_t *) malloc(sizeof(hash_node_t));
 
-	item->key = strdup(key);
-	item->value = strdup(value);
+	item->key = malloc(strlen(key) + 1);
+	item->value = malloc(strlen(value) + 1);
 	if (item->key == NULL || item->value == NULL)
 		return (NULL);
+	strcpy(item->key, key);
+	strcpy(item->value, value);
 	return (item);
 }
 
