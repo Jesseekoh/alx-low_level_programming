@@ -10,6 +10,6 @@ void print_chessboard(char (*a)[8])
         {
             _putchar(a[i][j]);
         }
-        putc('\n', stdout);
+        _putchar('\n');
     }
 }
